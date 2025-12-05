@@ -2,3 +2,4 @@ res://lessons/circuit.tscn
 res://addons/gdpractice/assets/theme.tres
 res://lessons/game.tscn
 res://lessons/runner.tscn
+res://lessons/runner.gd
