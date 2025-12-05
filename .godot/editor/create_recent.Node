@@ -1,6 +1,6 @@
+Sprite2D
 RunnerVisual
 SubViewport
-Sprite2D
 Camera2D
 CollisionPolygon2D
 StaticBody2D
