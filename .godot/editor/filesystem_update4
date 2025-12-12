@@ -2,3 +2,5 @@ res://lessons/game.tscn
 res://addons/gdpractice/assets/theme.tres
 res://lessons/pausescreen.tscn
 res://lessons/pausescreen.gd
+res://lessons/bouncer.tscn
+res://lessons/bouncer.gd
