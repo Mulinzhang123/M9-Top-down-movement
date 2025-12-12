@@ -1,3 +1,10 @@
+Button
+VBoxContainer
+CenterContainer
+Label
+PanelContainer
+ColorRect
+Control
 CanvasLayer
 CountDown
 Node
@@ -5,9 +12,3 @@ GPUParticles2D
 Node2D
 Sprite2D
 RunnerVisual
-SubViewport
-Camera2D
-CollisionPolygon2D
-StaticBody2D
-CollisionShape2D
-CharacterBody2D

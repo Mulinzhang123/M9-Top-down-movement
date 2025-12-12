@@ -1,7 +1,4 @@
-res://lessons/runner.tscn
-res://addons/gdpractice/assets/theme.tres
-res://lessons/test_particles.tscn
-res://lessons/runner.gd
 res://lessons/game.tscn
-res://lessons/game.gd
-res://assets/finish_line/finish_line.tscn
+res://addons/gdpractice/assets/theme.tres
+res://lessons/pausescreen.tscn
+res://lessons/pausescreen.gd
