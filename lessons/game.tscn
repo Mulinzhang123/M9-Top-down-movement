@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c62bk8cggi6yq"]
+[gd_scene load_steps=10 format=3 uid="uid://c62bk8cggi6yq"]
 
 [ext_resource type="Script" uid="uid://b3ch6il2xt8bb" path="res://lessons/game.gd" id="1_48faf"]
 [ext_resource type="Texture2D" uid="uid://5vl7p0xb7nd8" path="res://assets/circuit_background.png" id="1_gkp25"]
@@ -8,16 +8,10 @@
 [ext_resource type="PackedScene" uid="uid://ctfrkukdhiywq" path="res://lessons/circuit.tscn" id="4_sepuf"]
 [ext_resource type="Theme" uid="uid://cdcyvsn1fp8wa" path="res://assets/countdown/count_down_theme.tres" id="7_viysf"]
 [ext_resource type="Script" uid="uid://57e8080cpukf" path="res://assets/countdown/count_down.gd" id="8_tpjcj"]
-[ext_resource type="Shader" uid="uid://dp1hn66gsihpv" path="res://assets/blur.gdshader" id="9_tpjcj"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_8c4bg"]
-shader = ExtResource("9_tpjcj")
-shader_parameter/blur_amount = 2.000000095
-shader_parameter/tint = Color(0, 0, 0, 1)
-shader_parameter/tint_strength = 0.2000000095
-shader_parameter/saturation = 0.800000038
+[ext_resource type="PackedScene" uid="uid://dmlht2l8joygh" path="res://lessons/pausescreen.tscn" id="9_tpjcj"]
 
 [node name="Game" type="Node2D"]
+process_mode = 1
 y_sort_enabled = true
 script = ExtResource("1_48faf")
 
@@ -87,55 +81,7 @@ vertical_alignment = 1
 script = ExtResource("8_tpjcj")
 metadata/_custom_type_script = "uid://57e8080cpukf"
 
-[node name="pausescreen" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="blurColorRect" type="ColorRect" parent="CanvasLayer/pausescreen"]
-material = SubResource("ShaderMaterial_8c4bg")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="UIPanelContainer" type="PanelContainer" parent="CanvasLayer/pausescreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -283.0
-offset_top = -278.0
-offset_right = 283.0
-offset_bottom = 278.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/pausescreen/UIPanelContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="CanvasLayer/pausescreen/UIPanelContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/pausescreen/UIPanelContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/pausescreen/UIPanelContainer/VBoxContainer/CenterContainer"]
-layout_mode = 2
-
-[node name="resumebutton" type="Button" parent="CanvasLayer/pausescreen/UIPanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "resume
-"
-
-[node name="quitbutton" type="Button" parent="CanvasLayer/pausescreen/UIPanelContainer/VBoxContainer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-text = "quit
-"
+[node name="pausescreen" parent="CanvasLayer" instance=ExtResource("9_tpjcj")]
+process_mode = 3
+y_sort_enabled = true
+menu_opened_amount = 0.06
