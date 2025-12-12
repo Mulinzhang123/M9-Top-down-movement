@@ -4,3 +4,4 @@ res://lessons/pausescreen.tscn
 res://lessons/pausescreen.gd
 res://lessons/bouncer.tscn
 res://lessons/bouncer.gd
+res://lessons/game.gd
